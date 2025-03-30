@@ -4,89 +4,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividades de [Nombre]</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
-        /* Estilos básicos (también puedes usar un archivo CSS aparte) */
+        /* Estilos mejorados */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 20px;
-            background-color: #f4f4f9;
+            padding: 0;
+            background-color: #f5f7fa;
             color: #333;
         }
         header {
             text-align: center;
-            padding: 20px 0;
-            background: #4CAF50;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
             color: white;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .container {
             max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            margin: 0 auto 40px;
+            padding: 30px;
             background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #e0e0e0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .profile-info {
+            flex: 1;
         }
         h1 {
             color: white;
+            margin: 0;
+            font-size: 2.2em;
         }
         h2 {
-            color: #4CAF50;
+            color: #2E7D32;
             border-bottom: 2px solid #4CAF50;
-            padding-bottom: 5px;
+            padding-bottom: 8px;
+            margin-top: 25px;
         }
         ul {
-            list-style-type: square;
-            padding-left: 20px;
+            list-style-type: none;
+            padding-left: 0;
         }
         li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+        li:before {
+            content: "•";
+            color: #4CAF50;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2E7D32;
+            color: white;
+            font-size: 0.9em;
+        }
+        @media (max-width: 600px) {
+            .profile {
+                flex-direction: column;
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Actividades de <span id="nombre">[Nombre de la Persona]</span></h1>
+        <h1>Actividades de <span id="nombre">Lenin Egusquiza</span></h1>
     </header>
 
     <div class="container">
-        <section>
-            <h2>Información Personal</h2>
-            <p><strong>Nombre:</strong> <span id="nombre-persona">Juan Pérez</span></p>
-            <p><strong>Rol:</strong> Estudiante/Desarrollador</p>
+        <section class="profile">
+            <!-- Añade tu foto (reemplaza 'foto-perfil.jpg' con tu imagen) -->
+            <img src="foto-perfil.jpg" alt="Foto de perfil" class="profile-img">
+            <div class="profile-info">
+                <h2>Información Personal</h2>
+                <p><strong>Nombre:</strong> <span id="nombre-persona">Lenin Egusquiza</span></p>
+                <p><strong>Rol:</strong> Desarrollador Frontend</p>
+                <p><strong>Ubicación:</strong> Lima, Perú</p>
+            </div>
         </section>
 
         <section>
             <h2>Actividades Diarias</h2>
             <ul id="actividades">
-                <li>Desarrollo de proyectos web</li>
-                <li>Estudio de nuevas tecnologías</li>
-                <li>Reunión con el equipo</li>
-                <li>Ejercicio físico</li>
+                <li>Desarrollo de componentes React</li>
+                <li>Revisión de código con el equipo</li>
+                <li>Estudio de patrones de diseño</li>
+                <li>Ejercicio matutino (7:00 - 8:00 AM)</li>
+                <li>Planificación de tareas semanales</li>
             </ul>
         </section>
 
         <section>
             <h2>Proyectos Recientes</h2>
             <ul>
-                <li>Página web personal</li>
-                <li>Aplicación de gestión de tareas</li>
+                <li>Sistema de gestión de tareas (React + Firebase)</li>
+                <li>Portafolio personal interactivo</li>
+                <li>Landing page para cliente e-commerce</li>
             </ul>
         </section>
     </div>
 
-    <footer style="text-align: center; margin-top: 20px; padding: 10px; background: #4CAF50; color: white;">
-        <p>© 2023 - Creado por [Tu Nombre]</p>
+    <footer>
+        <p>© 2023 - Creado por María García | Última actualización: <span id="fecha"></span></p>
     </footer>
 
-    <!-- Script para personalizar dinámicamente (opcional) -->
     <script>
-        // Puedes personalizar el nombre y actividades con JavaScript
-        document.getElementById('nombre').textContent = 'LENIN EGUSQUIZA';
-        document.getElementById('nombre-persona').textContent = 'LENIN EGUSQUIZA';
+        // Script para fecha automática
+        document.getElementById('fecha').textContent = new Date().toLocaleDateString('es-ES', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+        
+        // Puedes personalizar más datos aquí si lo deseas
     </script>
 </body>
 </html>
