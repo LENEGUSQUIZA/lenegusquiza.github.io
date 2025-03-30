@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades de [Nombre]</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos básicos (también puedes usar un archivo CSS aparte) */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background: #4CAF50;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: white;
+        }
+        h2 {
+            color: #4CAF50;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Actividades de <span id="nombre">[Nombre de la Persona]</span></h1>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Información Personal</h2>
+            <p><strong>Nombre:</strong> <span id="nombre-persona">Juan Pérez</span></p>
+            <p><strong>Rol:</strong> Estudiante/Desarrollador/Diseñador</p>
+        </section>
+
+        <section>
+            <h2>Actividades Diarias</h2>
+            <ul id="actividades">
+                <li>Desarrollo de proyectos web</li>
+                <li>Estudio de nuevas tecnologías</li>
+                <li>Reunión con el equipo</li>
+                <li>Ejercicio físico</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Proyectos Recientes</h2>
+            <ul>
+                <li>Página web personal</li>
+                <li>Aplicación de gestión de tareas</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer style="text-align: center; margin-top: 20px; padding: 10px; background: #4CAF50; color: white;">
+        <p>© 2023 - Creado por [Tu Nombre]</p>
+    </footer>
+
+    <!-- Script para personalizar dinámicamente (opcional) -->
+    <script>
+        // Puedes personalizar el nombre y actividades con JavaScript
+        document.getElementById('nombre').textContent = 'María García';
+        document.getElementById('nombre-persona').textContent = 'María García';
+    </script>
+</body>
+</html>
